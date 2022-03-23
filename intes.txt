@@ -1,0 +1,14 @@
+Web VPython 3.2
+size=0.8
+theta=0
+R=10
+omega=2*pi
+t=0
+scene=canvas(width=800, height=600,center=vector(0,0,0), background=color.white)
+ball=sphere(pos=vector(R,0,0),radius=size,color=color.blue,make_trail=True)
+dt=0.001
+while True:
+ rate(1/dt)
+ t=t+dt
+ theta=theta+omega*dt
+ ball.pos=R*vector(cos(theta),sin(theta),0)
